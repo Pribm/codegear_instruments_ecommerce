@@ -1,0 +1,97 @@
+.card{
+    &__body{
+        min-height: 220px;
+
+        &_imageContainer{
+            height: 260px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            @media screen and (max-width: 768px) {
+                height: 260px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        &_info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-right: solid #ccc 1px;
+            @media screen and (max-width: 768px) {
+                border: none;
+            }
+            h4  {
+                color: var(--primary-color);
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            h5{
+                font-weight: 800;
+            }
+
+            ul{
+                margin: 0;
+                padding: 0;
+                li{
+                    font-size: 1.2rem;
+                    list-style: "• ";
+                    font-weight: 600;
+                    color: #999;
+                }
+            }
+        }
+
+        &_price{
+            text-align: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            h4{
+                font-weight: 900;
+                
+            }
+            span{
+                background-color: #a00;
+                padding: .1rem .5rem;
+                color: white;
+            }
+
+            h3{
+                font-size: 2rem;
+                font-weight: bolder;
+                color: rgb(52, 52, 52);
+               
+            }
+
+            &_buttons{
+                display: flex;
+                flex-direction: column;
+                margin-top: auto;
+                button{
+                    margin-top: 1rem;
+                    color: #a00;
+                    background-color: #fff;
+                    border: solid #a00 .1rem;
+                    border-radius: .2rem;
+                    transition: all .2s ease-in-out;
+
+                    &:hover{
+                        background-color: #a00;
+                        color: white;
+                        border-radius: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

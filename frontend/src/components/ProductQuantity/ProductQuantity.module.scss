@@ -1,0 +1,28 @@
+.quantity {
+   // border: solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        background-color: var(--primary-color);
+        color: white;
+
+        &:nth-child(1), &:nth-child(3){
+            &:hover{
+                cursor: pointer;
+                background-color: #660000;
+            }
+        }
+
+        &:nth-child(2){
+            background-color: #fff;
+            color: black;
+            border-top: var(--primary-color) 1px solid;
+            border-bottom: var(--primary-color) 1px solid;
+        }
+    }
+}

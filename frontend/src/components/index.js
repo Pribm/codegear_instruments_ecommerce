@@ -1,0 +1,8 @@
+export {default as Brands} from './Brands/Brands'
+export {default as Footer} from './Footer/Footer'
+export {default as Hero} from './Hero/Hero'
+export {default as Layout} from './Layout'
+export {default as Navbar} from './Navbar/Navbar'
+export {default as Featured} from './Featured'
+export {default as Products} from './Products/Products'
+export {default as ProductQuantity} from './ProductQuantity/ProductQuantity'

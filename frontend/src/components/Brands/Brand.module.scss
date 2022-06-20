@@ -1,0 +1,41 @@
+.slider {
+    height: 300px;
+}
+
+.h1{
+    color: var(--primary-color);
+    font-family: var(--heavy-font);
+}
+
+.slide{
+
+    height: 250px !important;
+    width: 250px !important;
+    display: flex !important;
+    justify-content: center !important;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    @media screen and (max-width: 768px) {
+        height: 120px !important;
+        width: 120px !important;
+    }
+
+    &:hover{
+        transform: scale(1.2);
+    }
+
+
+    img{
+
+        width: 220px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: 768px) {
+            width: 120px !important;
+        }
+    }
+}

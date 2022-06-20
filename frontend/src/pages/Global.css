@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+:root{
+    --white-color: #fff;
+    --light-color: #F2E6CE;
+    --dark-color: #190204;
+    --primary-color: #890F0D;
+    --secondary-color: #9a938d;
+    --lightgray-color: #eee;
+
+    --lightweight-font: 'Montserrat', sans-serif;
+    --text-font: 'Inter', sans-serif;
+    --heavy-font: 'Alfa Slab One', cursive;
+
+    --emphasis-shadow: 0px 8px 0 #000000, 5px -5px 0 #fff, -5px 10px 0 #fff, -5px -5px 0 #fff, 5px 0px 0 #fff, 0px 10px 0 #fff, -5px 0px 0 #fff, 5px 10px 0 #fff;
+    --emphasis-shadow-black:0px 8px 0 #000000;
+}
+
+*{
+    font-family: var(--text-font);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+p, span, li, button, input{
+    font-size: 1.4rem;
+}
