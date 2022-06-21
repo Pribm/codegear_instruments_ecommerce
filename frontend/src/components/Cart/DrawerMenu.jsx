@@ -3,7 +3,7 @@ import ProductCard from 'components/Cards/ProductCard'
 import { useStateContext } from 'context/StateContext'
 import React, { useState } from 'react'
 import { slide as Menu} from 'react-burger-menu'
-import { styles } from './DrawerMenuStyles'
+
 
 import { useEffect } from 'react'
 
@@ -34,7 +34,6 @@ const DrawerMenu = () => {
     isOpen={showCart}
     onClose={() => setShowCart(false)}
     itemListElement="div"
-    styles={styles}
     width={480}
     >
         <div className="d-flex h-100 flex-column">

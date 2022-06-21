@@ -11,9 +11,9 @@ const ProductCard = ({product}) => {
 
   return (
     <div className={'mt-3 p-4 ' + styles.card}>
-        <div className={"row "+styles.card__body}>
+        <div className={"row justify-content-center text-center "+styles.card__body}>
             <div className={"col-md-2 "+styles.card__body_imageContainer}>
-                <MyImage src={product.images[0]} alt="product Image" width={450} height={550} className={'img-fluid'}/>
+                <MyImage src={product.images[0]} alt="product Image" width={120} height={120} />
             </div>
             <div className={"col-md-9 "+styles.card__body_productInfoContainer}>
                 <h4 className='fw-bolder' style={{color: '#b00'}}>{product.mainName}</h4>

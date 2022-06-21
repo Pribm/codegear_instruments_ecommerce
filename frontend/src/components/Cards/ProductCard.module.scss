@@ -4,6 +4,9 @@
     
     margin-bottom: 1.4rem;
     position: relative;
+
+   
+
     &__body{
         position: relative;
         min-height: 100px;
@@ -19,7 +22,11 @@
         }
 
         &_productInfoContainer{
-            
+            h4{
+                @media screen and (max-width: 450px) {
+                    font-size: 2rem;
+                }
+            }
         }
 
         &_buttonsContainer{
