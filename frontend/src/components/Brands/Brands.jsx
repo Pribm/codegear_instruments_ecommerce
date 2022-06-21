@@ -14,6 +14,7 @@ const Categories = () => {
   const [brands, setBrands] = useState([])
   const [isLoading, setLoading] = useState(true)
 
+  const route  = useRouter()
 
   const settings = {
     dots: false,
@@ -48,12 +49,17 @@ const Categories = () => {
       !isLoading &&
       <div>
         <hr className='d-none d-md-block'/>
-        <h1 className={'text-center mt-5 mb-5 '+styles.h1}>Take a look at our brands 😉</h1>
+        <h1 className={'text-center mt-5 mb-5 '+styles.h1}>Search your product by the brand 😉</h1>
           <Slider {...settings} className={styles.slider}>
           {
             brands?.map(brand => {
               return (
-              <div key={brand._id} className={styles.slide}>
+              <div key={brand._id} className={styles.slide} onClick={() => route.replace({
+                pathname: '/search',
+                query: {
+                  result: brand.title
+                }
+              })}>
                 <MyImage src={brand.logo} width={250} height={'400'} alt={brand.title+' logo'}/>
               </div>
             )})
