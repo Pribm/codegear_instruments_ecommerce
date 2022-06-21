@@ -100,7 +100,7 @@ const Navbar = () => {
       <div className={styles.header__top+' container-fluid d-flex align-items-center bg-black'}>
         <div className="container py-3 d-flex flex-wrap justify-content-center align-items-center">
           <div className={styles.brand}>
-            <Image src={images.logo}/>
+            <Image src={images.logo} alt="Codegear Logo"/>
           </div>
           <div className={'ms-auto '+styles.header__top_searchbox}>
             <input type="text" placeholder='Search your gear today' onChange={e => setSearchField(e.target.value)}/>

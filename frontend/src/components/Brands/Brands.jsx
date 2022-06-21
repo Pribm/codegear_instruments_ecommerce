@@ -54,8 +54,7 @@ const Categories = () => {
             brands?.map(brand => {
               return (
               <div key={brand._id} className={styles.slide}>
-                <MyImage src={brand.logo} width={250} height={'400'} />
-                {/* <Image {...imageProps(urlFor(brand.logo.asset))} layout="responsive"  alt={brand.title+' logo'} onClick={() => router.push(`search?result=${brand.title}`)}/> */}
+                <MyImage src={brand.logo} width={250} height={'400'} alt={brand.title+' logo'}/>
               </div>
             )})
           }

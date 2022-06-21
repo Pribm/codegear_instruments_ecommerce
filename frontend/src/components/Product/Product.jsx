@@ -18,7 +18,7 @@ const Product = ({product, mainName}) => {
             <article>
                 <div onClick={() => router.push(`product/${product.slug}/${product.sku}`)} className='d-flex flex-column h-100'>
                     <figure>
-                        <MyImage src={product.images[0]} width={450} height={550}/>
+                        <MyImage src={product.images[0]} alt="product Image" width={450} height={550}/>
                     </figure>
                     <figcaption className='mt-auto'>
                         <h3>{mainName}</h3>

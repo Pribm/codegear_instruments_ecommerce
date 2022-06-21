@@ -30,7 +30,7 @@ const Product = ({ product }) => {
           <div className={styles.product__card_body+" row"}>
             <figure className='col-md-5'>
               {/* <Image src={urlFor(product.images[0])} alt="" /> */}
-              <MyImage src={product.images[0]} width={400} height={400} objectFit='contain'/>
+              <MyImage src={product.images[0]} width={400} height={400} objectFit='contain' alt="product Image"/>
             </figure>
             <div className={styles.product__card_body_info+' col-md-7'}>
               <article className={styles.product__details}>

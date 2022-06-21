@@ -14,6 +14,7 @@ export default function MyImage({
     return (
         <Image
         {...props}
+        alt={props.alt}
         loader={({ width: srcWidth }) => {
           let url =
           builder

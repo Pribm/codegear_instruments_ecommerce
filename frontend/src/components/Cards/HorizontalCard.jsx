@@ -16,7 +16,7 @@ const HorizontalCard = ({product}) => {
         <div className={'card mt-3 p-4 mb-3 ' + styles.card}>
             <div className={"row "+styles.card__body}>
                 <div className={"col-md-3 "+styles.card__body_imageContainer}>
-                    <MyImage src={product.images[0]} width={250} height={320} objectFit={'contain'}/>
+                    <MyImage src={product.images[0]} width={250} height={320} objectFit={'contain'} alt={"product Image"}/>
                 </div>
                 <div className={"col-md-6 "+styles.card__body_info}>
                     <h4>{product.mainName}</h4>

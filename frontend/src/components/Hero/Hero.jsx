@@ -50,6 +50,7 @@ const Hero = () => {
               <div className={styles.hero__productContainer}>
               <div className={styles.hero__productContainer_image}>
                 <MyImage
+                alt="product Image"
                 className={styles.hero__productContainer_image_inner}
                 src={mainProduct.product.promotionalImage
                 ? mainProduct.product.promotionalImage
