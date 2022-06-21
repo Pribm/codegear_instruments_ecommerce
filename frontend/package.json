@@ -22,7 +22,12 @@
     "react-payment-icons-inline": "^1.0.22",
     "sass": "^1.52.3",
     "stripe": "^9.9.0",
-    "styled-components": "^5.3.5"
+    "react-bootstrap": "^2.4.0",
+    "styled-components": "^5.3.5",
+    "slick-carousel": "^1.8.1",
+    "react-toastify": "^9.0.4",
+    "react-slick": "^0.29.0",
+    "react-burger-menu": "^3.0.8"
   },
   "devDependencies": {
     "@mui/icons-material": "^5.8.3",
@@ -31,11 +36,6 @@
     "babel-plugin-styled-components": "^2.0.7",
     "components": "^0.1.0",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "react-bootstrap": "^2.4.0",
-    "react-burger-menu": "^3.0.8",
-    "react-slick": "^0.29.0",
-    "react-toastify": "^9.0.4",
-    "slick-carousel": "^1.8.1"
+    "eslint-config-next": "12.1.6"
   }
 }

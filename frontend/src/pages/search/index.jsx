@@ -48,6 +48,7 @@ const SearchPage = () => {
             setProductList(result)
             setSearching(false)
         })
+
     }, [router.query.result])
 
 
