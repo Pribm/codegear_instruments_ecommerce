@@ -10,6 +10,8 @@ import {urlFor, client} from 'lib/client'
 import {Carousel} from 'react-bootstrap'
 import { useStateContext } from 'context/StateContext'
 
+import Image from 'next/image'
+
 const Hero = () => {
 
   const [mainProducts, setMainProducts] = useState([])
@@ -47,7 +49,7 @@ const Hero = () => {
               <Carousel.Item key={index}>
               <div className={styles.hero__productContainer}>
               <div className={styles.hero__productContainer_image}>
-                <img src={urlFor(mainProduct.product.promotionalImage ? mainProduct.product.promotionalImage : mainProduct.product.images[0])} alt="main_product" />
+                <Image src={urlFor(mainProduct.product.promotionalImage ? mainProduct.product.promotionalImage : mainProduct.product.images[0])} alt="main_product" />
               </div>
               <div className={styles.hero__productContainer_info} style={{background: `url(${images.bgHero.src})`}}>
                 <h1>{mainProduct.vendor}</h1>

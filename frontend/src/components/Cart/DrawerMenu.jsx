@@ -52,7 +52,7 @@ const DrawerMenu = () => {
           :
 
           <div>
-            <h1>There's no item yet!</h1>
+            <h1>There&#39;s no item yet!</h1>
           </div>
         }
         <div className='mt-auto text-end py-4'>

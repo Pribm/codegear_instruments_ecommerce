@@ -10,7 +10,7 @@ import { BsHeart } from 'react-icons/bs'
 import ProductQuantity from 'components/ProductQuantity/ProductQuantity'
 import { useStateContext } from 'context/StateContext'
 
-
+import Image from 'next/image'
 
 const Product = ({ product }) => {
 
@@ -28,7 +28,7 @@ const Product = ({ product }) => {
           </div>
           <div className={styles.product__card_body+" row"}>
             <figure className='col-md-5'>
-              <img src={urlFor(product.images[0])} alt="" />
+              <Image src={urlFor(product.images[0])} alt="" />
             </figure>
             <div className={styles.product__card_body_info+' col-md-7'}>
               <article className={styles.product__details}>

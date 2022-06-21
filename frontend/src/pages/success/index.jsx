@@ -6,7 +6,7 @@ import images from '../../constants/images'
 
 import * as animationData from '../../assets/95088-success.json'
 
-const index = () => {
+const Index = () => {
 
     const route = useRouter()
 
@@ -68,4 +68,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

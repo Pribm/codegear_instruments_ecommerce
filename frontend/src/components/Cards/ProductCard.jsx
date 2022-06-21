@@ -4,6 +4,8 @@ import React from 'react'
 import { RiDeleteBinFill } from 'react-icons/ri'
 import styles from './ProductCard.module.scss'
 
+import Image from 'next/image'
+
 const ProductCard = ({product}) => {
 
     const {toggleCartItemQuantity } = useStateContext()
@@ -12,7 +14,7 @@ const ProductCard = ({product}) => {
     <div className={'mt-3 p-4 ' + styles.card}>
         <div className={"row "+styles.card__body}>
             <div className={"col-md-2 "+styles.card__body_imageContainer}>
-                <img src={urlFor(product.images[0])} alt={product.title} className={'img-fluid'} />
+                <Image src={urlFor(product.images[0])} alt={product.title} className={'img-fluid'} />
             </div>
             <div className={"col-md-9 "+styles.card__body_productInfoContainer}>
                 <h4 className='fw-bolder' style={{color: '#b00'}}>{product.mainName}</h4>

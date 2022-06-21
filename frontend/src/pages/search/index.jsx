@@ -75,9 +75,9 @@ const SearchPage = () => {
                             :
                             <div className='card p-4'>
                                 <div className='text-center display-2 mb-4'>
-                                    🎸🎹🎚️🧑‍🎤
+                                &#🎸&#🎹&#🎚️&#🧑‍🎤
                                 </div>
-                                <h3 className='text-center m-0 p-0'>Sorry, but we Still Haven't Found What you're Looking For...</h3>
+                                <h3 className='text-center m-0 p-0'>Sorry, but we Still Haven&#39;t Found What you&#39;re Looking For...</h3>
                             </div>
                     }
                 </div>

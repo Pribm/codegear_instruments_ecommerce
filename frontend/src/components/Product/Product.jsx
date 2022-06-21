@@ -5,6 +5,8 @@ import styles from './Product.module.scss'
 import { useRouter } from 'next/router'
 import { useStateContext } from 'context/StateContext'
 
+import Image from 'next/image'
+
 const Product = ({product, mainName}) => {
 
     const router = useRouter()
@@ -15,7 +17,7 @@ const Product = ({product, mainName}) => {
             <article>
                 <div onClick={() => router.push(`product/${product.slug}/${product.sku}`)} className='d-flex flex-column h-100'>
                     <figure>
-                        <img src={urlFor(product.images[0])} alt={product.title+'_image'} />
+                        <Image src={urlFor(product.images[0])} alt={product.title+'_image'} />
                     </figure>
                     <figcaption className='mt-auto'>
                         <h3>{mainName}</h3>

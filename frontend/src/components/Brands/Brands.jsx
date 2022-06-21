@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import styles from './Brand.module.scss'
 import { useRouter } from 'next/router';
 
-
+import Image from 'next/image';
 
 
 const Categories = () => {
@@ -51,7 +51,7 @@ const Categories = () => {
         {
           brands?.map(brand => (
             <div key={brand._id} className={styles.slide}>
-              <img src={urlFor(brand.logo)} alt={brand.title+' logo'} onClick={() => router.push(`search?result=${brand.title}`)}/>
+              <Image src={urlFor(brand.logo)} alt={brand.title+' logo'} onClick={() => router.push(`search?result=${brand.title}`)}/>
             </div>
           ))
         }

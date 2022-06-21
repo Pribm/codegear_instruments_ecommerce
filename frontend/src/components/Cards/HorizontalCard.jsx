@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import styles from './HorizontalCard.module.scss'
 
+import Image from 'next/image'
+
 const HorizontalCard = ({product}) => {
 
     const {addProduct} = useStateContext()
@@ -14,7 +16,7 @@ const HorizontalCard = ({product}) => {
         <div className={'card mt-3 p-4 ' + styles.card}>
             <div className={"row "+styles.card__body}>
                 <div className={"col-md-3 d-flex align-items-center "+styles.card__body_imageContainer}>
-                    <img src={urlFor(product.images[0])} alt='' className={'img-fluid'} />
+                    <Image src={urlFor(product.images[0])} alt='' className={'img-fluid'} />
                 </div>
                 <div className={"col-md-6 "+styles.card__body_info}>
                     <h4>{product.mainName}</h4>
