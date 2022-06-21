@@ -1,10 +1,10 @@
 import { useStateContext } from 'context/StateContext'
-import { urlFor } from 'lib/client'
+
 import { useRouter } from 'next/router'
 import React from 'react'
 import styles from './HorizontalCard.module.scss'
 
-import Image from 'next/image'
+import MyImage from 'lib/SanityImageBuilder'
 
 const HorizontalCard = ({product}) => {
 
@@ -13,10 +13,10 @@ const HorizontalCard = ({product}) => {
     const router = useRouter()
 
     return (
-        <div className={'card mt-3 p-4 ' + styles.card}>
+        <div className={'card mt-3 p-4 mb-3 ' + styles.card}>
             <div className={"row "+styles.card__body}>
-                <div className={"col-md-3 d-flex align-items-center "+styles.card__body_imageContainer}>
-                    <Image src={urlFor(product.images[0])} alt='' className={'img-fluid'} />
+                <div className={"col-md-3 "+styles.card__body_imageContainer}>
+                    <MyImage src={product.images[0]} width={250} height={320} objectFit={'contain'}/>
                 </div>
                 <div className={"col-md-6 "+styles.card__body_info}>
                     <h4>{product.mainName}</h4>

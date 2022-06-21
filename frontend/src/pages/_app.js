@@ -1,5 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { StateContext } from 'context/StateContext';
 
 import './Global.css'

@@ -5,12 +5,12 @@ import {images} from 'constants'
 
 import {GiShoppingCart} from 'react-icons/gi'
 
-import {urlFor, client} from 'lib/client'
+import { client} from 'lib/client'
 
 import {Carousel} from 'react-bootstrap'
 import { useStateContext } from 'context/StateContext'
 
-import Image from 'next/image'
+import MyImage from 'lib/SanityImageBuilder'
 
 const Hero = () => {
 
@@ -49,7 +49,18 @@ const Hero = () => {
               <Carousel.Item key={index}>
               <div className={styles.hero__productContainer}>
               <div className={styles.hero__productContainer_image}>
-                <Image src={urlFor(mainProduct.product.promotionalImage ? mainProduct.product.promotionalImage : mainProduct.product.images[0])} alt="main_product" />
+                <MyImage
+                className={styles.hero__productContainer_image_inner}
+                src={mainProduct.product.promotionalImage
+                ? mainProduct.product.promotionalImage
+                : mainProduct.product.images[0]
+                }
+                layout={'fill'}
+                objectFit={'cover'}
+                objectPosition={'center center'}
+                sanityWidth={800}
+                sanityHeight={700}
+                />
               </div>
               <div className={styles.hero__productContainer_info} style={{background: `url(${images.bgHero.src})`}}>
                 <h1>{mainProduct.vendor}</h1>

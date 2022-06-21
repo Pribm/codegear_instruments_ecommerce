@@ -1,10 +1,9 @@
 import { useStateContext } from 'context/StateContext'
-import { urlFor } from 'lib/client'
 import React from 'react'
 import { RiDeleteBinFill } from 'react-icons/ri'
 import styles from './ProductCard.module.scss'
 
-import Image from 'next/image'
+import MyImage from 'lib/SanityImageBuilder'
 
 const ProductCard = ({product}) => {
 
@@ -14,7 +13,7 @@ const ProductCard = ({product}) => {
     <div className={'mt-3 p-4 ' + styles.card}>
         <div className={"row "+styles.card__body}>
             <div className={"col-md-2 "+styles.card__body_imageContainer}>
-                <Image src={urlFor(product.images[0])} alt={product.title} className={'img-fluid'} />
+                <MyImage src={product.images[0]} width={450} height={550} className={'img-fluid'}/>
             </div>
             <div className={"col-md-9 "+styles.card__body_productInfoContainer}>
                 <h4 className='fw-bolder' style={{color: '#b00'}}>{product.mainName}</h4>

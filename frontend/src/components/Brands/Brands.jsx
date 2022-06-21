@@ -1,4 +1,4 @@
-import { client, urlFor } from 'lib/client'
+import { client, nextImageData, urlFor } from 'lib/client'
 import React, { useEffect, useState } from 'react'
 
 import "slick-carousel/slick/slick.css"
@@ -6,14 +6,14 @@ import Slider from "react-slick";
 import styles from './Brand.module.scss'
 import { useRouter } from 'next/router';
 
-import Image from 'next/image';
+import MyImage from 'lib/SanityImageBuilder';
 
 
 const Categories = () => {
 
   const [brands, setBrands] = useState([])
+  const [isLoading, setLoading] = useState(true)
 
-  const router = useRouter()
 
   const settings = {
     dots: false,
@@ -40,23 +40,26 @@ const Categories = () => {
 
     client.fetch(query).then(data => {
       setBrands(data)
+      setLoading(false)
     })
   }, [])
 
   return (
+      !isLoading &&
       <div>
         <hr className='d-none d-md-block'/>
         <h1 className={'text-center mt-5 mb-5 '+styles.h1}>Take a look at our brands 😉</h1>
-        <Slider {...settings} className={styles.slider}>
-        {
-          brands?.map(brand => (
-            <div key={brand._id} className={styles.slide}>
-              <Image src={urlFor(brand.logo)} alt={brand.title+' logo'} onClick={() => router.push(`search?result=${brand.title}`)}/>
-            </div>
-          ))
-        }
-      </Slider>
-
+          <Slider {...settings} className={styles.slider}>
+          {
+            brands?.map(brand => {
+              return (
+              <div key={brand._id} className={styles.slide}>
+                <MyImage src={brand.logo} width={250} height={'400'} />
+                {/* <Image {...imageProps(urlFor(brand.logo.asset))} layout="responsive"  alt={brand.title+' logo'} onClick={() => router.push(`search?result=${brand.title}`)}/> */}
+              </div>
+            )})
+          }
+        </Slider>
       </div>
   )
 }

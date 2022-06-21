@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useStateContext } from 'context/StateContext'
 
 import Image from 'next/image'
+import MyImage from 'lib/SanityImageBuilder'
 
 const Product = ({product, mainName}) => {
 
@@ -17,7 +18,7 @@ const Product = ({product, mainName}) => {
             <article>
                 <div onClick={() => router.push(`product/${product.slug}/${product.sku}`)} className='d-flex flex-column h-100'>
                     <figure>
-                        <Image src={urlFor(product.images[0])} alt={product.title+'_image'} />
+                        <MyImage src={product.images[0]} width={450} height={550}/>
                     </figure>
                     <figcaption className='mt-auto'>
                         <h3>{mainName}</h3>

@@ -9,6 +9,7 @@
 
     &__card{
         max-width: 650px;
+        height: 100%;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -27,7 +28,6 @@
         }
 
         &_body{
-
             width: 100%;
             margin-left: auto;
             margin-right: auto;
@@ -83,7 +83,7 @@
     &__details{
         &_text{
             @media screen and (max-width: 765px) {
-                height: 200px;
+                height: 150px;
                 overflow-y: scroll;
             }
         }

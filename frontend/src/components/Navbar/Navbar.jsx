@@ -7,6 +7,9 @@ import  {HiMenu, HiXCircle} from 'react-icons/hi'
 import { Spinner } from 'react-bootstrap'
 import { useStateContext } from 'context/StateContext'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import {images} from '../../constants'
 
 const NavLinks = ({ data }) => {
   return (
@@ -97,9 +100,9 @@ const Navbar = () => {
       <div className={styles.header__top+' container-fluid d-flex align-items-center bg-black'}>
         <div className="container py-3 d-flex flex-wrap justify-content-center align-items-center">
           <div className={styles.brand}>
-            <h2>Coding<span>Magic</span></h2>
+            <Image src={images.logo}/>
           </div>
-          <div className={styles.header__top_searchbox}>
+          <div className={'ms-auto '+styles.header__top_searchbox}>
             <input type="text" placeholder='Search your gear today' onChange={e => setSearchField(e.target.value)}/>
             {isSearching ? 
             <div className={styles.header__top_searchbox_spinner}>
@@ -136,7 +139,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.mobile_nav}>
           <a href="#" className={styles.open_menu} onClick={() => toggleMenu()}>
-            <HiMenu/>
+            <HiMenu size={50}/>
           </a>
         </div>
 

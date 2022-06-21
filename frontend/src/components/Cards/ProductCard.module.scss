@@ -1,10 +1,11 @@
 .card{
     box-shadow: 0 2px 10px rgba(0,0,0,.1);
     border-radius: 15px;
-    position: relative;
     
     margin-bottom: 1.4rem;
+    position: relative;
     &__body{
+        position: relative;
         min-height: 100px;
         align-items: center;
         justify-content: space-between;

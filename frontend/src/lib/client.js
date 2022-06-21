@@ -6,10 +6,11 @@ const client = sanityClient({
     dataset: 'products',
     token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
     apiVersion: '2022-06-12',
-    useCdn: true
+    useCdn: true,
+    useProjectHostname: true
 })
 
-const builder = imageUrlBuilder(client)
+export const builder = imageUrlBuilder(client)
 
 const urlFor = src => builder.image(src)
 
