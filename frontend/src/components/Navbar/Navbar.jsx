@@ -102,7 +102,7 @@ const Navbar = () => {
             <Image src={images.logo} alt="Codegear Logo"/>
           </div>
           <div className={'ms-auto '+styles.header__top_searchbox}>
-            <input type="text" placeholder='Search your gear today' onChange={e => setSearchField(e.target.value)}/>
+            <input type="text" placeholder='Search by the product name, brand or specs' onChange={e => setSearchField(e.target.value)}/>
             {isSearching ? 
             <div className={styles.header__top_searchbox_spinner}>
               <Spinner animation="border" role="status">

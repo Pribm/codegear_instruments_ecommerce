@@ -26,6 +26,8 @@ const SearchPage = () => {
         && slug.current match "*${slug}*"
         || variants[].title match "*${slug}*"
         || categories[]->slug.current match "*${slug}*"
+        || defaultProductVariant.details[]->detail match "*${slug}*"
+        || variants[].details[]->detail match "*${slug}*"
         || categories[]->parents[]->slug.current match "*${slug}*"]{
             "products": [defaultProductVariant, ...variants]{
                 ...,
