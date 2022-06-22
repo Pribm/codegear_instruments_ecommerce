@@ -31,7 +31,11 @@ export default {
     {
       title: 'Promotional Image',
       name: 'promotionalImage',
-      type: 'image'
+      type: 'image',
+      description: 'Set the aspect ratio of the image nearest of the square ratio',
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'details',

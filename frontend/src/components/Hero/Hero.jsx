@@ -59,8 +59,8 @@ const Hero = () => {
                 layout={'fill'}
                 objectFit={'cover'}
                 objectPosition={'center center'}
-                sanityWidth={800}
-                sanityHeight={700}
+                sanityWidth={500}
+                sanityHeight={500}
                 />
               </div>
               <div className={styles.hero__productContainer_info} style={{background: `url(${images.bgHero.src})`}}>
