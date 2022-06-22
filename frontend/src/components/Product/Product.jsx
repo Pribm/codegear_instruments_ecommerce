@@ -17,8 +17,8 @@ const Product = ({product, mainName}) => {
         <div className={styles.product}>
             <article>
                 <div onClick={() => router.push(`product/${product.slug}/${product.sku}`)} className='d-flex flex-column h-100'>
-                    <figure>
-                        <MyImage src={product.images[0]} alt="product Image" width={450} height={550}/>
+                    <figure >
+                        <MyImage src={product.images[0]} alt="product Image" layout="fill" objectFit='scale-down'/>
                     </figure>
                     <figcaption className='mt-auto'>
                         <h3>{mainName}</h3>

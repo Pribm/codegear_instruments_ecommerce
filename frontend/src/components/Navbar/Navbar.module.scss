@@ -12,13 +12,12 @@ $mobile-screen: 820px;
         position: relative;
         display: flex;
         align-items: center;
-        min-width: 320px;
+        width: 600px;
+        margin-right: auto;
         height: 50px;
-        flex: 1;
         border-radius: 15px;
         border: white 1px solid;
         overflow: hidden;
-
         &_spinner{
           position: absolute;
           right: 0;
@@ -61,12 +60,15 @@ $mobile-screen: 820px;
       }
 
       &_icons{
-        flex: 1;
-        height: 60px;
 
+        height: 60px;
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: flex-end;
+        
+        @media screen and (max-width: 768px) {
+          flex: 1;
+        }
 
         &_cart{
           position: relative;

@@ -18,7 +18,8 @@ const NavLinks = ({ data }) => {
         <li
           key={item.title + i}
           className={`${styles.menu_item} ${item.subcategory?.length > 0 ? styles.has_sub_menu : ''}`}>
-          <Link href={
+          <Link
+          href={
             item.subcategory?.length > 0 ?
             '#'
             :
@@ -33,7 +34,6 @@ const NavLinks = ({ data }) => {
           </Link>
           <ul
             className={`${styles.sub_menu}`}>
-        
             {item.subcategory && <NavLinks data={item.subcategory} />}
           </ul>
         </li>
@@ -59,8 +59,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const[searchField, setSearchField] = useState('')
-
-  
 
   useEffect(() => {
     const query = `*[_type == "category" && title == "Products"]{
@@ -94,6 +92,7 @@ const Navbar = () => {
         setLoading(false)
       })
   }, [])
+
 
   return (
     <header className={styles.header}>
@@ -148,7 +147,7 @@ const Navbar = () => {
             <li className={styles.menu_item}>
               <Link href="/">Home</Link>
             </li>
-            {!isLoading && <NavLinks data={navLinks[0].subcategory} />}
+            {!isLoading && <NavLinks data={navLinks[0].subcategory} toggleMenu={toggleMenu}/>}
           </ul>
         </nav>
       </div>
